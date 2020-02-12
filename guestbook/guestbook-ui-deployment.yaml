@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: httpd:latest
+      - image: nginx:latest
         name: guestbook-ui
         ports:
         - containerPort: 80
@@ -22,6 +22,5 @@ spec:
   # ----- Everything above this comment are the same as a deployment -----
     canary: # A new field that used to provide configurable options for a Canary strategy
       steps:
-      - setWeight: 20
-      - pause:
-       duration: 20
+      - setWeight: 100
+      - pause: {}
