@@ -22,6 +22,11 @@ spec:
   # ----- Everything above this comment are the same as a deployment -----
     canary: # A new field that used to provide configurable options for a Canary strategy
       steps:
-      - setWeight: 10
+      - setWeight: 20
       - pause:
-          duration: 30
+          duration: 20
+      - setWeight: 40
+      - pause:
+          duration: 20
+      - setWeight: 100
+      - pause: {}
