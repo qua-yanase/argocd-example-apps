@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: nginx:alpine
+      - image: httpd:alpine
         name: guestbook-ui
         ports:
         - containerPort: 80
@@ -29,4 +29,3 @@ spec:
       - pause:
           duration: 20
       - setWeight: 100
-      - pause: {}
